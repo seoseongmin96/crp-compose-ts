@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import AddBoard from '@/components/articles/AddBoard'
+import AddBoard from '@/components/articles/AddArticle'
 import { useAppDispatch } from '@/hooks'
 import { NextPage } from 'next'
 import { writeBoard } from '@/modules/boards'
@@ -11,7 +11,6 @@ export interface ArticleWrite {
   height: string,
   weight: string
 }
-
 const AddBoardPage: NextPage = () =>  {
   const [write, setWrite] = useState<ArticleWrite>({
     title: '', content: '', height: '', weight: '', picture: null

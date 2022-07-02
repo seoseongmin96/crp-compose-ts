@@ -61,9 +61,9 @@ export function Nav() {
         People
         </a>
     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a className="dropdown-item" href="/articles/addBoard">UPLOAD</a></li>
+        <li><a className="dropdown-item" href="/articles/addArticle">UPLOAD</a></li>
         <li><a className="dropdown-item" href="/boards/myBoardList">MY UPLOAD</a></li>
-        <li><a className="dropdown-item" href="/boards/allBoardList">Clozet People</a></li>
+        <li><a className="dropdown-item" href="/boards/allArticleList">Clozet People</a></li>
         <li><a className="dropdown-item" href="/boards/trend">Trend</a></li>
     </ul>
     </li>

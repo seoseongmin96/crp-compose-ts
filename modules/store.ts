@@ -56,6 +56,6 @@ const store = makeStore();
 export type AppState = ReturnType<typeof rootReducer>;
 export type AppDispatch = typeof store.dispatch;
 export const wrapper = createWrapper(makeStore, {debug: isDev})
-export default store;
+export default store;  
 
 

@@ -5,7 +5,6 @@ import { loginFailure, loginSuccess } from "@/modules/users/login";
 import { AxiosResponse } from "axios";
 import { call, put, take, takeLatest, throttle } from "redux-saga/effects";
 
-
 //get Saga
 function* writeArticleSaga(action : {payload: Article}) {
     const param = action.payload

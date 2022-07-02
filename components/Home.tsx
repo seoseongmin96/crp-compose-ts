@@ -65,7 +65,7 @@ const Home: React.FC = () => {
     <div id="Fade" className="carousel slide carousel-fade" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active" data-bs-interval="3000">
-      <img src="guitar.jpg" height = {630} className="d-block w-100" />
+      <img src="pen.jpg" height = {630} className="d-block w-100"/>
       <div className = "carousel-caption text-start d-none d-md-block">
       <h2>Create Your Music</h2>
         <p>The music you hear is beautiful, but the music you don't hear is even more beautiful.</p>
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
 </div>
 <div className='contents'>
   <section className='wrapper'>
-
+      
       <article className='product0'>
         <p>Use Closet
         클로젯을 이용하세요 제발 좀</p>
