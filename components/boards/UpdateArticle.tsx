@@ -6,7 +6,7 @@ import React from 'react'
 type Props = {
     onChange : (e: React.FormEvent<HTMLInputElement> | any ) => void
     onSubmit : (e: React.FormEvent<HTMLFormElement> ) => void
-    board: any
+    board: any,
     title: string,
     content: string
   }

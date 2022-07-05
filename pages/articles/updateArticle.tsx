@@ -3,8 +3,9 @@ import UpdateArticle from '@/components/boards/UpdateArticle'
 import { useAppDispatch, useAppSelector } from '@/hooks'
 import { NextPage } from 'next'
 import { useRouter } from 'next/router'
-import { fetchArticleRequest, updateRequest } from "@/modules/boards/updateArticle";
+import { updateRequest } from "@/modules/boards/updateArticle";
 import { connect, useSelector } from 'react-redux'
+import { ParsedUrlQuery } from 'querystring'
 
 
 export interface UpdateArticle {
@@ -43,7 +44,7 @@ const onChange = (e: React.FormEvent<HTMLInputElement>) => {
     console.log("board:"+JSON.stringify(board))
   }
 
-const onSubmit = (e: React.FormEvent<HTMLInputElement>) => {
+const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
         alert('진행 1: 수정 버튼 클릭')
         console.log(`글 정보 : ${JSON.stringify(board)}`)
@@ -53,9 +54,13 @@ const onSubmit = (e: React.FormEvent<HTMLInputElement>) => {
 }
 
 return(
-<UpdateArticle board={board} onChange={onChange} onSubmit={onSubmit} />
+<UpdateArticle board={board} onChange={onChange} onSubmit={onSubmit} title={''} content={''} />
 )
 }
 const mapStateToProps = (state: { write: { isUpdated: any } }) => ({isUpdated: state.write.isUpdated})
 const updateActions = {updateRequest}
 export default  connect(mapStateToProps, updateActions)(updateArticlePage)
+
+function fetchArticleRequest(id: ParsedUrlQuery): any {
+    throw new Error('Function not implemented.')
+}
