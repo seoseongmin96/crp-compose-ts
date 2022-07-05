@@ -7,8 +7,15 @@ type Props = {
     onChange : (e: React.FormEvent<HTMLInputElement> | any ) => void
     onSubmit : (e: React.FormEvent<HTMLFormElement> ) => void
     board: any,
+    articleId? : string,
     title: string,
-    content: string
+    writtenDate? : string,
+    open? : string,
+    content: string,
+    picture? : any,
+    height? : string,
+    weight? : string,
+    comment? : string
   }
 
   const UpdateArticle: React.FC<Props> = ({board, onChange, onSubmit}) => {

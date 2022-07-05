@@ -1,4 +1,5 @@
 import { fetchArticleAPI, writeArticleApi } from "@/apis/articleApi";
+import { updateArticleApi } from "@/apis/updateArticleApi";
 import { Article, UpdateArticleActions, updateRequest, updateArticleFailure, updateArticleSuccess, } from "@/modules/boards/updateArticle";
 import { userActions } from "@/modules/users/join";
 import { loginFailure, loginSuccess } from "@/modules/users/login";

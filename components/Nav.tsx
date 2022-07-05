@@ -64,6 +64,7 @@ export function Nav() {
         <li><a className="dropdown-item" href="/articles/addArticle">UPLOAD</a></li>
         <li><a className="dropdown-item" href="/boards/myBoardList">MY UPLOAD</a></li>
         <li><a className="dropdown-item" href="/boards/allArticleList">Clozet People</a></li>
+        <li><a className="dropdown-item" href="/boards/updateArticle">Update Article</a></li>
         <li><a className="dropdown-item" href="/boards/trend">Trend</a></li>
     </ul>
     </li>

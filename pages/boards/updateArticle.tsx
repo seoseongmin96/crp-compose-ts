@@ -25,15 +25,15 @@ title: '', content: ''})
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const dispatch = useAppDispatch()
 // eslint-disable-next-line react-hooks/rules-of-hooks
-useEffect(() => {
-    dispatch(fetchArticleRequest(id))
-}, []);
+
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
-const {article} = useSelector((state: { update: any }) => state.update);
+
+
+//const {article} = useSelector((state: { update: any }) => state.update);
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
-useEffect(() => {setBoard(article)}, [article])
+//useEffect(() => {setBoard(article)}, [article])
 // console.log("board : " + JSON.stringify(board))
 // console.log("article : " + JSON.stringify(article))
 
@@ -50,17 +50,15 @@ const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         console.log(`글 정보 : ${JSON.stringify(board)}`)
         dispatch(updateRequest(board))
         setBoard({title: '', content: ''})
-        window.location.href = "../boards/allArticleList.tsx" 
+        window.location.href = "../boards/allArticleList" 
 }
 
 return(
 <UpdateArticle board={board} onChange={onChange} onSubmit={onSubmit} title={''} content={''} />
 )
 }
-const mapStateToProps = (state: { write: { isUpdated: any } }) => ({isUpdated: state.write.isUpdated})
+//const mapStateToProps = (state: { write: { isUpdated: any } }) => ({isUpdated: state.write.isUpdated})
 const updateActions = {updateRequest}
-export default  connect(mapStateToProps, updateActions)(updateArticlePage)
+export default updateArticlePage
 
-function fetchArticleRequest(id: ParsedUrlQuery): any {
-    throw new Error('Function not implemented.')
-}
+
